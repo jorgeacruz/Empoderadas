@@ -11,73 +11,74 @@ export default function Polos() {
 
   //lista de polos de treinamentos
   const [polo, setPolo] = useState([
+    
     {   
-        id:"1",
+        id:"0",
         estado:"Rio de Janeiro",
         polo:"Complexo do Alemão",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"21969955007",
+        email:"poloalemao@emporadas.com.br",
+        map:"https://maps.app.goo.gl/n4kHwP3GQPSsKwMe8"
+    },
+    {   
+        id:"1",
+        estado:"Rio de Janeiro",
+        polo:"Mangueira",
+        endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
+        resp:"Ana Paula da Silva",
+        contato:"(21)987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     },
     {   
         id:"2",
         estado:"Rio de Janeiro",
-        polo:"Mangueira",
+        polo:"Rio das Ostras",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"(21) 987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     },
     {   
         id:"3",
         estado:"Rio de Janeiro",
-        polo:"Rio das Ostras",
+        polo:"Friburgo",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"(21) 987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     },
     {   
         id:"4",
         estado:"Rio de Janeiro",
-        polo:"Friburgo",
+        polo:"Petrópolis",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"(21) 987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     },
     {   
         id:"5",
         estado:"Rio de Janeiro",
-        polo:"Petrópolis",
+        polo:"Campos dos Goytacazes",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"(21) 987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     },
     {   
         id:"6",
         estado:"Rio de Janeiro",
-        polo:"Campos dos Goytacazes",
-        endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
-        resp:"Ana Paula da Silva",
-        contato:"21987685024",
-        email:"poloalemao@emporadas.com.br",
-        map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
-    },
-    {   
-        id:"7",
-        estado:"Rio de Janeiro",
         polo:"Favela da Maré",
         endereco:"Rua Nazaré Tedesco, 1200 - Morro do Alemão",
         resp:"Ana Paula da Silva",
-        contato:"21987685024",
+        contato:"(21) 987685024",
         email:"poloalemao@emporadas.com.br",
         map:"https://goo.gl/maps/xBFzekZYVuDfByFJ7"
     }
@@ -102,18 +103,21 @@ export default function Polos() {
 function ListaPolos(props){
   return(
     <ContainerLista>
+
       <Title style={{ textAlign:'left', marginVertical:5}}>{props.data.polo}</Title>
       <Text>{props.data.endereco}</Text>
       <Text style={{padingBottom:0}}>Resp: {props.data.resp}</Text>
   
     <Container style={{flexDirection:'row', justifyContent:'flex-start', paddingTop:5}}>
-      <BTN onPress={()=>{Linking.openURL('tel:8777111223');} }>
-      <Feather name="phone" color={'#fff'} size={14} />
-        <Text style={{color:'#fff'}} >{props.data.contato}</Text>
+      
+      <BTN onPress={()=>{Linking.openURL(props.data.contato);}}>
+        <Feather name="phone" color={'#fff'} size={14} />
+        <Text style={{color:'#fff'}} > {props.data.contato} </Text>
       </BTN>
-      <BTN onPress={()=> {props.data.map}}>
-      <Feather name="map" color={'#fff'} size={14} />
-         <Text style={{color:'#fff'}}>Mapa</Text>
+      
+      <BTN onPress={()=>{Linking.openURL(props.data.map);}}>
+         <Feather name="map" color={'#fff'} size={14} />
+         <Text style={{color:'#fff'}}> Mapa </Text>
       </BTN>
     </Container>
     
