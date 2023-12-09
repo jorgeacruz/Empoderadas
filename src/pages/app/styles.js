@@ -48,6 +48,8 @@ export const BTN = styled.TouchableOpacity`
     border-radius: 4px;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 170px;
 `;
 export const BTNEpaes = styled.TouchableOpacity`
     padding-right: 20px;

@@ -9,7 +9,7 @@ export default function Contact() {
   function twitterLink() { Linking.openURL('https://twitter.com'); }
   return (
     <Container>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
 
         <ContainerView>
           <Logo source={require('../../images/logo.png')} />
