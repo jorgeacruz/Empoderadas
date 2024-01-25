@@ -36,23 +36,7 @@ export default function Contact() {
           </ContainerIcon>
         </ContainerView>
         
-        <ContainerView>
-          <Text style={{fontWeight:'bold', marginBottom:15}}>Idealizadores / Responsáveis</Text>
-          <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-            <BTNEpaes>
-              <Image source={require('../../images/EricaPaes.png')} />
-              <Text>Erica Paes</Text>
-            </BTNEpaes>
-            <BTNEpaes>
-              <Image source={require('../../images/EricaPaes.png')} />
-              <Text>Erica Paes</Text>
-            </BTNEpaes>
-            <BTNEpaes>
-              <Image source={require('../../images/EricaPaes.png')} />
-              <Text>Erica Paes</Text>
-            </BTNEpaes>
-          </View>
-        </ContainerView>
+        
 
       </ScrollView>
     </Container >
